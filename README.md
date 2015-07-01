@@ -12,11 +12,11 @@ npm install
 and in two separate consoles
 
 ```sh
-npm watch
+npm run watch
 ```
 
 ```sh
-npm start
+npm run start
 ```
 
 Then open your browser to `localhost:8080` and enjoy.
