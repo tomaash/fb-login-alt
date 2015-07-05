@@ -3,7 +3,8 @@ import {Alert, Button, Well} from 'react-bootstrap';
 import LoginActions from '../../actions/LoginActions';
 import LoginStore from '../../stores/LoginStore';
 import connectToStores from 'alt/utils/connectToStores';
-
+import connectToStores from 'alt/utils/connectToStores';
+import {facebook} from '../../../server/config';
 /* global FB */
 @connectToStores
 export default class Login extends React.Component {
@@ -26,7 +27,7 @@ export default class Login extends React.Component {
     } else {
       window.fbAsyncInit = () => {
         FB.init({
-          appId: 'YOUR-ID',
+          appId: facebook.client_id,
           xfbml: true,
           version: 'v2.3'
         });

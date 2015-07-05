@@ -11,7 +11,7 @@ import promisify from 'es6-promisify';
 graph.get = promisify(graph.get);
 
 export default function(app) {
-  const mongoUrl = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || '127.0.0.1:27017/isofilmdb';
+  const mongoUrl = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || '127.0.0.1:27017/fbloginalt';
   const mongoose = require('mongoose');
   mongoose.connect(mongoUrl);
 
