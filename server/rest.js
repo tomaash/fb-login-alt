@@ -33,7 +33,10 @@ export default function(app) {
       const fbtoken = data.query.access_token;
       graph.setAccessToken(shortToken);
       var profile = yield graph.get('me', {fields: 'id,name,picture'});
-      var user = yield User.findOne({fbid}) || new User({fbid});
+      var user = yield User.findOne({fbid});
+      if (!user) {
+        user = new User({fbid});
+      }
       user.fbtoken = fbtoken;
       user.name = profile.name;
       user.picture = profile.picture.data.url;

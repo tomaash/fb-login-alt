@@ -4,6 +4,8 @@
 
 ## Running This
 
+First, copy `server/config.example.js` to `server/config.js` and fill in your Facebook app credentials. Then,
+
 ```sh
 npm install -g browserify watchify nodemon
 npm install
